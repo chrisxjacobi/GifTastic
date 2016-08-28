@@ -19,15 +19,18 @@
 </head>
 
 <body>
-    <div id="buttons">
-        <button data-instrument="guitar">guitar</button>
-        <button data-instrument="bass">bass</button>
-        <button data-instrument="microphone">microphone</button>
-        <button data-instrument="theremin">theremin</button>
+    <div class="container">
+        <h1>Gif Search!</h1>
+        <div id="topicsView"></div>
+        <div id="buttonsView"></div>
+        <form id="topic-form">
+            <label form="topic-input">Search for gifs of anything you'd like!</label>
+            <input type="text" id="topic-input">
+            <br>
+            <input id="addTopic" type="submit" value="search">
+        </form>
     </div>
-    <div id="gifsAppearHere">
-    </div>
-    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+<script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
 
 </html>
