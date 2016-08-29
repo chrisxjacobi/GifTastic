@@ -1,7 +1,5 @@
 var topics = ['instruments', 'nature', 'swimming', 'space'];
 
-
-
 function renderButtons() {
     $('#addButton').empty();
     //for loop that iterates through array and creates button
@@ -14,7 +12,8 @@ function renderButtons() {
         button.text(topics[i]);
         $('#addButton').append(button);
 
-    }
+    } addGif();
+
 };
 
 $('#addGif').on('click', function() {
@@ -27,6 +26,8 @@ $('#addGif').on('click', function() {
 
 renderButtons();
 
+
+function addGif () {
 $('button').on('click', function() {
     var p = $(this).data('name');
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
@@ -49,8 +50,7 @@ $('button').on('click', function() {
                 $('#gifsAppearHere').prepend(gifDiv);
             }
         });
-
-});
-
+    });
+}
 
 
