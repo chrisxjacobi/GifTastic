@@ -45,6 +45,8 @@ function addGif() {
 
                     var personImage = $('<img>');
                     personImage.attr('src', results[i].images.fixed_height_still.url);
+                    personImage.attr('data-still', results[i].images.fixed_height_still.url);
+                    personImage.attr('data-animate', results[i].images.fixed_height.url);
                     personImage.attr('data-state', results[i].images.fixed_height_still.url);
 
                     gifDiv.append(p)
@@ -52,11 +54,12 @@ function addGif() {
 
                     $('#gifsAppearHere').prepend(gifDiv);
 
+                }
 
-                    $('.item').children('img').on('click', function() {
+                $('.item').children('img').on('click', function() {
 
 
-                        var state = $(this).attr('data-still');
+                        var state = $(this).attr('data-state');
 
                         if (state == 'still') {
                             $(this).attr('src', $(this).data('animate'));
@@ -67,7 +70,6 @@ function addGif() {
                         } 
 
                     });
-                }
             });
     });
 }
