@@ -12,7 +12,8 @@ function renderButtons() {
         button.text(topics[i]);
         $('#addButton').append(button);
 
-    } addGif();
+    }
+    addGif();
 
 };
 
@@ -27,30 +28,46 @@ $('#addGif').on('click', function() {
 renderButtons();
 
 
-function addGif () {
-$('button').on('click', function() {
-    var p = $(this).data('name');
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
+function addGif() {
+    $('button').on('click', function() {
+        var p = $(this).data('name');
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
 
-    $.ajax({ url: queryURL, method: 'GET' })
-        .done(function(response) {
-            var results = response.data;
+        $.ajax({ url: queryURL, method: 'GET' })
+            .done(function(response) {
+                var results = response.data;
+                console.log(response);
 
-            for (var i = 0; i < results.length; i++) {
-                var gifDiv = $('<div class="item">');
-                var rating = results[i].rating;
-                var p = $('<p>').text("Rating: " + rating);
-                
-                var personImage = $('<img>');
-                personImage.attr('src', results[i].images.fixed_height.url);
+                for (var i = 0; i < results.length; i++) {
+                    var gifDiv = $('<div class="item">');
+                    var rating = results[i].rating;
+                    var p = $('<p>').text("Rating: " + rating);
 
-                gifDiv.append(p)
-                gifDiv.append(personImage)
+                    var personImage = $('<img>');
+                    personImage.attr('src', results[i].images.fixed_height_still.url);
+                    personImage.attr('data-state', results[i].images.fixed_height_still.url);
 
-                $('#gifsAppearHere').prepend(gifDiv);
-            }
-        });
+                    gifDiv.append(p)
+                    gifDiv.append(personImage)
+
+                    $('#gifsAppearHere').prepend(gifDiv);
+
+
+                    $('.item').children('img').on('click', function() {
+
+
+                        var state = $(this).attr('data-still');
+
+                        if (state == 'still') {
+                            $(this).attr('src', $(this).data('animate'));
+                            $(this).attr('data-state', 'animate');
+                        } else {
+                            $(this).attr('src', $(this).data('still'));
+                            $(this).attr('data-state', 'still');
+                        } 
+
+                    });
+                }
+            });
     });
 }
-
-
