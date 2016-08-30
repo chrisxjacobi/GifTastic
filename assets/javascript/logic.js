@@ -1,4 +1,4 @@
-var topics = ['instruments', 'nature', 'swimming', 'space'];
+var topics = ['books', 'nature', 'swimming', 'space'];
 
 function renderButtons() {
     $('#addButton').empty();
