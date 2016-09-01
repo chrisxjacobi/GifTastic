@@ -1,0 +1,24 @@
+h3 {
+	text-align: center;
+}
+
+.jumbotron {
+	width: 60%;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 50px;
+}
+
+#addButton {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#gifForm {
+	margin-left: 320px;
+	margin-bottom: 20px;
+}
+
+#addGif {
+	margin-left: 100px;
+}

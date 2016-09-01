@@ -1,6 +1,6 @@
 <!--
-	-add appropriate links for reset, style, jquery, bootstrap, javascript
-	-
+    -add appropriate links for reset, style, jquery, bootstrap, javascript
+    -
 -->
 <!DOCTYPE html>
 <html>
@@ -18,9 +18,12 @@
 </head>
 
 <body>
-    <div id="startingButtons">
-    </div>
-    <div id="addButton">
+    <div class="panel panel-success" id="startingButtons">
+        <div class="panel-heading">
+            <h3 class="panel-title">GIFtastic!</h3>
+        </div>
+        <div id="addButton" class="panel-body">
+        </div>
     </div>
     <form id="gifForm">
         <label form="gifInput">Add a button!</label>
@@ -28,7 +31,7 @@
         <br>
         <input id="addGif" type="submit" value="Add">
     </form>
-    <div id="gifsAppearHere">
+    <div id="gifsAppearHere" class="jumbotron">
     </div>
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
