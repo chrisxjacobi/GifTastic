@@ -23,6 +23,10 @@ $('#addGif').on('click', function() {
     topics.push(userInput);
     renderButtons();
     return false;
+    
+    if (userInput === ' ') {
+        $('#gif-input').val().trim();
+    }
 });
 
 renderButtons();
@@ -39,6 +43,7 @@ function addGif() {
                 console.log(response);
 
                 for (var i = 0; i < results.length; i++) {
+                    
                     var gifDiv = $('<div class="item">');
                     var rating = results[i].rating;
                     var p = $('<p>').text("Rating: " + rating);

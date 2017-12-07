@@ -1,24 +1,87 @@
-h3 {
-	text-align: center;
+/*top text styling*/
+
+.panel .name {
+    font-family: 'Bungee', cursive;
+    font-size: 48px;
+    color: #ed64e8;
 }
 
+.panel {
+    font-size: 22px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+/*gif image area and appeared gifs*/
+
 .jumbotron {
-	width: 60%;
-	margin-left: 100px;
-	margin-right: 100px;
-	padding: 50px;
+    background-color: transparent !important;
+}
+
+.jumbotron img {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.item p {
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
 }
 
 #addButton {
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px;
+}
+
+
+.text {
+    margin-top: 3%;
 }
 
 #gifForm {
-	margin-left: 320px;
-	margin-bottom: 20px;
+    text-align: center;
+}
+
+#startingButtons {
+    margin: 5%;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.topic {
+    font-family: 'Bungee', cursive;
+}
+
+
+/*form*/
+
+form {
+    text-align: center;
+    font-family: 'Bungee', cursive;
+}
+
+#gif-input {
+    margin: 2%;
+}
+
+label {
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 #addGif {
-	margin-left: 100px;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    padding: 3%;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
 }
