@@ -12,24 +12,6 @@
 }
 
 
-/*gif image area and appeared gifs*/
-
-.jumbotron {
-    background-color: transparent !important;
-}
-
-.jumbotron img {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-.item p {
-    font-family: 'Gloria Hallelujah', cursive;
-    text-align: center;
-}
-
 #addButton {
     margin-left: auto;
     margin-right: auto;
@@ -41,6 +23,8 @@
 .text {
     margin-top: 3%;
 }
+
+/*gif div*/
 
 #gifForm {
     text-align: center;
@@ -85,4 +69,22 @@ label {
     border-radius: 50%;
     background-color: green;
     color: white;
+}
+
+/*gif image area and appeared gifs*/
+
+.jumbotron {
+    background-color: transparent !important;
+}
+
+.jumbotron img {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.item p {
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
 }
